@@ -194,7 +194,6 @@ def extract_user_short(data):
     """Extract User Short info"""
     data["pk"] = data.get("id") or data.get("pk")
     if not data["pk"] or str(data["pk"]) == "0":
-        logger.warning(f'User without pk: {data}')
         return UserShort(**data)
     return UserShort(**data)
 
